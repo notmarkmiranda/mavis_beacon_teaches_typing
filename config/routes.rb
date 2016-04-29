@@ -3,7 +3,8 @@ Rails.application.routes.draw do
     resources :attempts, only: [:new, :create]
   end
 
-  resources :attempts, only: [:show]
+  resources :attempts, only: [:show, :index]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

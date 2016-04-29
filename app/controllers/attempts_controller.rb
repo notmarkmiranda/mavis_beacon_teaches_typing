@@ -1,4 +1,9 @@
 class AttemptsController < ApplicationController
+
+  def index
+    @attempts = Attempt.take_top_three
+  end
+
   def new
     @level   = Level.find(params[:level_id])
     @attempt = Attempt.new
@@ -15,7 +20,7 @@ class AttemptsController < ApplicationController
   end
 
 private
-  
+
   def attempt_params
     params.require(:attempt).permit(:text)
   end

@@ -1,0 +1,9 @@
+<ol>
+
+<% @attempts.each do |attempt| %>
+  <li>
+    <%= attempt.text %> -
+    <%= attempt.level.title %>
+  </li>
+<% end %>
+</ol>
